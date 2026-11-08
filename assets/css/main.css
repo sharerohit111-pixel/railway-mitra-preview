@@ -1,0 +1,605 @@
+
+/* =========================================
+   RAILWAY MITRA
+   ROYAL BLUE + SILVER 3D PREMIUM THEME
+   ========================================= */
+
+:root {
+    --royal: #082D63;
+    --blue: #1456A0;
+    --bright: #4C91E8;
+    --silver: #C5D0DF;
+    --light: #F1F5FA;
+    --white: #FFFFFF;
+    --text: #102D50;
+    --muted: #708198;
+    --shadow: 0 12px 28px rgba(8, 45, 99, .16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 5%, #DCEBFF, transparent 35%),
+        linear-gradient(145deg, #F7FAFF, #DCE5F0);
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    color: white;
+    background: linear-gradient(135deg, #061D40, #1456A0 65%, #397FC8);
+    border-bottom: 2px solid rgba(210, 225, 245, .6);
+    box-shadow: 0 7px 22px rgba(5, 30, 68, .3);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #FFFFFF, #9EB6D5);
+    box-shadow:
+        5px 5px 12px rgba(0, 0, 0, .3),
+        inset 2px 2px 5px white,
+        inset -3px -3px 7px #8198B5;
+}
+
+.brand h1 {
+    font-size: 22px;
+    letter-spacing: .5px;
+    font-weight: 800;
+    text-shadow: 0 3px 7px rgba(0,0,0,.3);
+}
+
+.brand p {
+    color: #D6E7FF;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.menu-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 13px;
+    color: white;
+    font-size: 23px;
+    background: linear-gradient(145deg, #377EC6, #092C60);
+    box-shadow: 4px 5px 10px rgba(0,0,0,.3),
+                inset 1px 1px 3px rgba(255,255,255,.3);
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 16px 38px;
+}
+
+/* WELCOME PANEL */
+
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 25px;
+    margin-bottom: 30px;
+    border-radius: 22px;
+    color: white;
+    background: linear-gradient(130deg, #061D40, #124F94, #3985D0);
+    border: 1px solid rgba(255,255,255,.65);
+    box-shadow:
+        0 14px 30px rgba(8,45,99,.28),
+        inset 0 2px 3px rgba(255,255,255,.25);
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    right: -55px;
+    top: -65px;
+    border-radius: 50%;
+    border: 22px solid rgba(255,255,255,.1);
+    box-shadow: 0 0 35px rgba(255,255,255,.12);
+}
+
+.welcome-section h2 {
+    position: relative;
+    font-size: 26px;
+    margin-bottom: 9px;
+}
+
+.welcome-section p {
+    position: relative;
+    color: #DCEBFF;
+    font-size: 13px;
+    margin-bottom: 23px;
+}
+
+.profile-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #082D63;
+    font-weight: 800;
+    font-size: 14px;
+    background: linear-gradient(145deg, #FFFFFF, #B8C9DF);
+    border: 1px solid white;
+    box-shadow:
+        0 6px 0 #7895B8,
+        0 10px 17px rgba(0,0,0,.25),
+        inset 0 2px 4px white;
+    transition: .2s;
+}
+
+.profile-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #7895B8;
+}
+
+/* SECTION TITLE */
+
+.dashboard-section h2 {
+    color: #082D63;
+    font-size: 21px;
+    margin-bottom: 19px;
+    padding-left: 10px;
+    border-left: 4px solid #3985D0;
+}
+
+/* 3D FEATURE CARDS */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.feature-card {
+    position: relative;
+    min-height: 155px;
+    padding: 19px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 17px;
+    border: 1px solid #FFFFFF;
+    background: linear-gradient(145deg, #FFFFFF, #DCE6F2);
+    box-shadow:
+        7px 8px 0 #B6C5D8,
+        0 12px 20px rgba(8,45,99,.15),
+        inset 2px 2px 5px white,
+        inset -2px -2px 5px rgba(125,151,184,.2);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.feature-card::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: -35px;
+    top: -40px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, rgba(76,145,232,.18), rgba(255,255,255,.05));
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        7px 12px 0 #9FB3CC,
+        0 18px 25px rgba(8,45,99,.2),
+        inset 2px 2px 5px white;
+}
+
+.feature-card:active {
+    transform: translateY(3px);
+    box-shadow: 2px 3px 0 #A8BBD2;
+}
+
+.feature-card > span {
+    position: relative;
+    z-index: 1;
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+    font-size: 27px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #FFFFFF, #B6C9E0);
+    box-shadow:
+        4px 5px 9px rgba(8,45,99,.2),
+        inset 2px 2px 4px white,
+        inset -2px -2px 4px #91A9C7;
+}
+
+.feature-card h3 {
+    position: relative;
+    z-index: 1;
+    color: #082D63;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.feature-card p {
+    position: relative;
+    z-index: 1;
+    color: #63758E;
+    font-size: 11px;
+}
+
+/* PRIVACY PANEL */
+
+.privacy-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 19px;
+    border-radius: 17px;
+    border: 1px solid white;
+    background: linear-gradient(145deg, #EAF2FC, #C9D9EC);
+    box-shadow:
+        5px 6px 0 #A9BDD5,
+        0 10px 18px rgba(8,45,99,.12),
+        inset 2px 2px 4px white;
+}
+
+.privacy-section > span {
+    font-size: 32px;
+    filter: drop-shadow(2px 4px 3px rgba(0,0,0,.2));
+}
+
+.privacy-section h3 {
+    color: #0C477C;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.privacy-section p {
+    color: #526A85;
+    font-size: 12px;
+}
+
+/* FOOTER */
+
+.app-footer {
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 28px;
+    color: white;
+    background: linear-gradient(135deg, #061D40, #124F94);
+    border-top: 2px solid #B8C9DF;
+    box-shadow: 0 -5px 20px rgba(8,45,99,.12);
+}
+
+.app-footer h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.app-footer p {
+    color: #D6E7FF;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .welcome-section {
+        padding: 27px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .brand h1 {
+        font-size: 19px;
+    }
+
+    .brand-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 27px;
+    }
+
+    .feature-grid {
+        gap: 11px;
+    }
+
+    .feature-card {
+        min-height: 145px;
+        padding: 15px 11px;
+    }
+
+    .feature-card h3 {
+        font-size: 13px;
+    }
+
+    .feature-card p {
+        font-size: 10px;
+    }
+
+    .welcome-section h2 {
+        font-size: 21px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+   }
+
+/* =====================================
+   RAILWAY MITRA - NEON PREMIUM THEME
+   Designed by Rohit Kumar
+===================================== */
+
+:root {
+    --navy: #050B1A;
+    --panel: #101D35;
+    --cyan: #35E8FF;
+    --pink: #FF45D4;
+    --purple: #9B5CFF;
+    --white: #F7FAFF;
+}
+
+body {
+    background:
+        radial-gradient(circle at 10% 10%, #102B55, transparent 40%),
+        radial-gradient(circle at 90% 80%, #381044, transparent 40%),
+        #050B1A !important;
+    color: var(--white) !important;
+}
+
+/* HEADER */
+
+.app-header {
+    background: linear-gradient(120deg, #07152D, #101C3D, #24103C) !important;
+    border-bottom: 1px solid #35E8FF !important;
+    box-shadow: 0 5px 25px #00DFFF35 !important;
+}
+
+.brand-icon {
+    background: linear-gradient(135deg, #00E5FF, #8B42FF, #FF36C9) !important;
+    color: white !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 18px #00DFFF99 !important;
+}
+
+.brand h1 {
+    background: linear-gradient(90deg, #35E8FF, #FFFFFF, #FF45D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+/* WELCOME PANEL */
+
+.welcome-section {
+    background: linear-gradient(135deg, #07152D, #142B50, #301343) !important;
+    border: 1px solid #35E8FF !important;
+    box-shadow: 0 0 25px #00DFFF35,
+                0 0 35px #FF45D425 !important;
+    position: relative;
+    padding-top: 90px !important;
+    overflow: hidden;
+}
+
+.welcome-section::after {
+    content: "Rohit Kumar  |  Founder & Developer";
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    padding: 12px 15px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+    background: linear-gradient(120deg, #142E50, #52205D);
+    border: 1px solid #FF45D4;
+    box-shadow: 0 0 15px #FF45D455;
+}
+
+.welcome-section h2 {
+    color: white !important;
+    text-shadow: 0 0 15px #35E8FF55;
+}
+
+.welcome-section p {
+    color: #A8EFFF !important;
+}
+
+/* PROFILE BUTTON */
+
+.profile-btn {
+    background: linear-gradient(110deg, #00BFEF, #7451FF, #E83DBD) !important;
+    color: white !important;
+    border: 1px solid #70F5FF !important;
+    box-shadow: 0 0 15px #35E8FF55 !important;
+}
+
+/* SECTION HEADINGS */
+
+.dashboard-section h2 {
+    color: #35E8FF !important;
+    text-shadow: 0 0 12px #35E8FF55;
+}
+
+/* FEATURE CARDS */
+
+.feature-card {
+    background: linear-gradient(145deg, #122846, #17203F, #28153D) !important;
+    border: 1px solid #287CBA !important;
+    border-radius: 20px !important;
+    box-shadow: 0 5px 18px #00000055,
+                inset 0 0 12px #35E8FF12 !important;
+    color: white !important;
+    transition: all .25s ease !important;
+}
+
+.feature-card span {
+    background: linear-gradient(135deg, #00E5FF, #8050FF, #FF45D4) !important;
+    color: white !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 15px #35E8FF55 !important;
+    text-shadow: 0 0 8px white;
+}
+
+.feature-card h3 {
+    color: #FFFFFF !important;
+}
+
+.feature-card p {
+    color: #A9DDFB !important;
+}
+
+.feature-card:active {
+    transform: scale(.97);
+}
+
+/* PRIVACY PANEL */
+
+.privacy-section {
+    background: linear-gradient(120deg, #102B45, #25143D) !important;
+    border: 1px solid #35E8FF !important;
+    color: white !important;
+    box-shadow: 0 0 15px #35E8FF25 !important;
+}
+
+.privacy-section h3 {
+    color: #35E8FF !important;
+}
+
+.privacy-section p {
+    color: #D3E8FF !important;
+}
+
+/* FOOTER */
+
+.app-footer {
+    background: linear-gradient(135deg, #071326, #201033) !important;
+    border-top: 2px solid #35E8FF !important;
+    color: white !important;
+}
+
+.app-footer h3 {
+    background: linear-gradient(90deg, #35E8FF, #FF45D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.app-footer p {
+    color: #D7C5FF !important;
+}
+
+/* MENU BUTTON */
+
+.menu-btn {
+    background: linear-gradient(135deg, #00BFEF, #8545D9, #E83DBD) !important;
+    color: white !important;
+    border: 1px solid #70F5FF !important;
+    box-shadow: 0 0 15px #35E8FF55 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 400px) {
+    .welcome-section {
+        padding: 90px 15px 22px !important;
+    }
+
+    .welcome-section::after {
+        font-size: 10px;
+        right: 10px;
+        top: 14px;
+        padding: 9px;
+    }
+
+    .feature-card {
+        border-radius: 17px !important;
+    }
+}
+
+
+
+/* Dashboard additions: language selector, responsive navigation and clear states. */
+.header-actions{display:flex;align-items:center;gap:9px}
+.language-btn{min-height:40px;padding:0 12px;border:1px solid #35E8FF;border-radius:11px;background:linear-gradient(120deg,#12375C,#452052);color:#fff;font-weight:700;box-shadow:0 0 12px #35E8FF35}
+.feature-grid{align-items:stretch}
+.feature-card{min-height:132px;padding:15px 13px;box-shadow:0 5px 16px #00000045,inset 0 0 12px #35E8FF12}
+.feature-card>span{width:43px;height:43px;margin-bottom:9px;font-size:24px}
+.feature-card:focus-visible,.language-btn:focus-visible,.menu-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.module-loading,.module-error{grid-column:1/-1;padding:18px;border:1px solid #35E8FF55;border-radius:14px;color:#d7efff;background:#101d35}
+.mobile-menu{display:none;position:absolute;top:calc(100% + 8px);right:5%;width:min(290px,90vw);max-height:70vh;overflow:auto;padding:9px;border:1px solid #35E8FF;border-radius:14px;background:#0b1730;box-shadow:0 12px 30px #0009;z-index:300}
+.mobile-menu.is-open{display:block}
+.mobile-menu a{display:block;padding:12px;color:#effaff;border-bottom:1px solid #ffffff20;text-decoration:none;font-size:14px}
+.mobile-menu a:last-child{border-bottom:0;color:#ffb4c2}
+.bottom-nav{position:sticky;bottom:0;z-index:90;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));border-top:1px solid #35E8FF66;background:#08142bed;backdrop-filter:blur(12px)}
+.bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;color:#d9f7ff;text-decoration:none;font-size:19px}
+.bottom-nav small{font-size:10px;color:#c4d8ee}
+.app-footer{padding-bottom:24px}
+@media(min-width:769px){.bottom-nav{max-width:700px;margin:0 auto;border:1px solid #35E8FF55;border-bottom:0;border-radius:16px 16px 0 0}}
+@media(max-width:400px){.header-actions{gap:6px}.language-btn{min-height:38px;padding:0 9px;font-size:12px}.feature-card{min-height:125px}.feature-card>span{width:39px;height:39px;font-size:22px}}

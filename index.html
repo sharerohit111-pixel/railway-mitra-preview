@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071326">
+  <meta name="description" content="Railway Mitra - Your Railway Digital Companion">
+  <title>Railway Mitra</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">🚆</div>
+      <div>
+        <h1>Railway Mitra</h1>
+        <p data-i18n="tagline">Your Railway Digital Companion</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="language-btn" id="languageToggle" type="button" aria-label="Switch language to Hindi">हिन्दी</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="welcome-section">
+      <h2 data-i18n="welcome">Welcome to Railway Mitra</h2>
+      <p data-i18n="intro">Your Railway Services, Salary and Employee Tools in One Place.</p>
+      <a href="features/profile/index.html" class="profile-btn" data-i18n="profile">👤 My Employee Profile</a>
+    </section>
+
+    <section class="dashboard-section" id="services">
+      <h2 data-i18n="services">Employee Services</h2>
+      <div class="feature-grid" id="featureGrid" aria-live="polite">
+        <p class="module-loading">Loading employee services…</p>
+      </div>
+    </section>
+
+    <section class="privacy-section">
+      <span aria-hidden="true">🔐</span>
+      <div>
+        <h3 data-i18n="privacy">Privacy First</h3>
+        <p data-i18n="privacyText">Your personal employee information must remain private and protected.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <h3>Railway Mitra</h3>
+    <p data-i18n="tagline">Your Railway Digital Companion</p>
+    <p>© 2026 Railway Mitra</p>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a href="#home"><span aria-hidden="true">⌂</span><small data-nav-home>Home</small></a>
+    <a href="#services"><span aria-hidden="true">▦</span><small data-nav-services>Services</small></a>
+    <a href="features/rules/index.html"><span aria-hidden="true">▤</span><small data-nav-rules>Rules</small></a>
+    <a href="features/profile/index.html"><span aria-hidden="true">♙</span><small data-nav-profile>Profile</small></a>
+  </nav>
+
+  <script src="assets/js/module-loader.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js")
+          .catch(error => console.error("Service Worker Error:", error));
+      });
+    }
+  </script>
+</body>
+</html>
